@@ -1,2 +1,1 @@
-require("rahul.core")
-require("rahul.lazy")
+require("config.lazy")
