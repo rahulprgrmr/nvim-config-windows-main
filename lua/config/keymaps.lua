@@ -22,9 +22,9 @@ keymap.set("n", "<s-tab>", "<cmd>:tabprev<Return>", opts) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
+--[[ keymap.set("n", "<C-J>", function()
 	vim.diagnostic.jump({ count = 1, float = true })
-end, opts)
+end, opts) ]]
 
 -- Save
 keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR>", { desc = "Save File" })
