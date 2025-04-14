@@ -1,7 +1,7 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "-", "<cmd>Oil --float<CR>", { desc = "Open Parent Directory in Oil" })
+keymap.set("n", "-", "<cmd>Oil --float --preview<CR>", { desc = "Open Parent Directory in Oil" })
 keymap.set("n", "gl", function()
 	vim.diagnostic.open_float()
 end, { desc = "Open Diagnostics in Float" })
@@ -37,3 +37,6 @@ keymap.set("n", "<A-k>", ":m .-2<CR>==", opts)
 -- Visual Mode
 keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+
+-- clear search highlights
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
